@@ -1,6 +1,6 @@
 ###### Homework: Homework 2.2
 
-Write a program in the language of your choice that will remove the grade of type "homework" with the lowest score for each student from the dataset in the handout. Since each document is one grade, it should remove one document per student. This will use the same data set as the last problem, but if you don't have it, you can download and re-import.
+Write a program in the language of your choice that will remove the grade of type "homework" with the lowest score for each student from the dataset in the handout. Since each document is one grade, it should remove one document per student. This will use the same data set as the last problem, but if you don't have it, you can [download](https://university.mongodb.com/static/MongoDB_2016_M101P_January/handouts/grades.ef42a2b3e7ff.json) and re-import.
 
 The dataset contains 4 scores each for 200 students.
 
