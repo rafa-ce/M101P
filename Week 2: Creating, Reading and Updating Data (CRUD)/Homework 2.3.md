@@ -72,3 +72,25 @@ python validate.py -help
 ``
 
 If you got it right, it will provide a validation code for you to enter into the box below. Enter just the code, no spaces. Note that your blog must be running when you run the validator.
+
+###### Answer: jkfds5834j98fnm39njf0920f02
+
+Start blog:
+```
+$ python blog.py 
+Bottle v0.12.9 server starting up (using WSGIRefServer())...
+Listening on http://localhost:8082/
+Hit Ctrl-C to quit.
+```
+
+Validation script:
+```
+$ python validate.py
+Welcome to the HW 2.3 validation tester
+Trying to create a test user  IBqDItv
+Found the test user  IBqDItv  in the users collection
+User creation successful.
+Trying to login for test user  IBqDItv
+User login successful.
+Validation Code is  jkfds5834j98fnm39njf0920f02
+```
