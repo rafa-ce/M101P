@@ -56,3 +56,7 @@ db.grades.aggregate( { '$group' : { '_id' : '$student_id', 'average' : { $avg : 
 ```
 
 Enter the student ID below. Please enter just the number, with no spaces, commas or other characters.
+
+###### Answer: 54
+
+Program that remove the grade of type "homework": hw2-2.py
