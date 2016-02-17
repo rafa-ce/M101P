@@ -31,3 +31,33 @@ The answer should be student_id 164 with an average of approximately 89.3.
 Now it’s your turn to analyze the data set. Find all exam scores greater than or equal to 65, and sort those scores from lowest to highest.
 
 What is the student_id of the lowest exam score above 65?
+
+###### Answer: 22
+
+```
+$ mongoimport -d students -c grades < grades.json
+2016-02-15T23:46:15.872+0000	connected to: localhost
+2016-02-15T23:46:16.026+0000	imported 800 documents
+```
+
+```
+$ mongo
+MongoDB shell version: 3.2.0
+connecting to: test
+> use students
+switched to db students
+> db.grades.count()
+800
+> db.grades.aggregate(
+    {
+      '$match': { 'score':{ $gte: 65} }
+    },
+    {
+      '$sort':{'score':1}
+    },
+    {
+      '$limit':1
+    }
+  )
+{ "_id" : ObjectId("50906d7fa3c412bb040eb5cf"), "student_id" : 22, "type" : "exam", "score" : 65.02518811936324
+```
