@@ -53,8 +53,7 @@ class UserDAO:
 
         user = None
         try:
-            # XXX HW 2.3 Students Work Here
-            # you will need to retrieve right document from the users collection.
+            user = self.users.find_one({"_id":username}, {"password":password})
             print "This space intentionally left blank."
         except:
             print "Unable to query database for user"
