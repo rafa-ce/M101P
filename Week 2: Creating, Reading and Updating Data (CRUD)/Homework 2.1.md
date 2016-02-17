@@ -1,6 +1,6 @@
 ###### Homework: Homework 2.1
 
-In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download grades.json from the Download Handout link and import it into your local mongo database as follows:
+In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download grades.json from the [Download Handout](https://university.mongodb.com/static/MongoDB_2016_M101P_January/handouts/grades.ef42a2b3e7ff.json) link and import it into your local mongo database as follows:
 
 ``
 $ mongoimport -d students -c grades < grades.json
