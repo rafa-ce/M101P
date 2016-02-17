@@ -82,10 +82,7 @@ class UserDAO:
             user['email'] = email
 
         try:
-            # XXX HW 2.3 Students work here
-            # You need to insert the user into the users collection.
-            # Don't over think this one, it's a straight forward insert.
-
+            self.users.insert_one(user)
             print "This space intentionally left blank."
 
         except pymongo.errors.OperationFailure:
@@ -96,5 +93,3 @@ class UserDAO:
             return False
 
         return True
-
-
