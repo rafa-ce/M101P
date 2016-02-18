@@ -72,7 +72,7 @@ $ mongoimport -d school -c students < students.json
 2016-02-18T00:08:50.922+0000	imported 200 documents
 ```
 
-Before run  hw3-1.py
+After run  hw3-1.py
 ```
 $ mongo
 MongoDB shell version: 3.2.0
