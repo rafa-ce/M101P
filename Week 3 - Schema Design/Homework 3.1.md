@@ -62,3 +62,23 @@ db.students.aggregate(
 	{ '$group' : { '_id' : '$_id' , 'average' : { $avg : '$scores.score' } } } ,
 	{ '$sort' : { 'average' : -1 } } , { '$limit' : 1 } )
 ```
+
+##### answer: 13
+
+Import students.json
+```
+$ mongoimport -d school -c students < students.json
+2016-02-18T00:08:50.870+0000	connected to: localhost
+2016-02-18T00:08:50.922+0000	imported 200 documents
+```
+
+Before run  hw3-1.py
+```
+$ mongo
+MongoDB shell version: 3.2.0
+connecting to: test
+> use school
+switched to db school
+> db.students.aggregate( { '$unwind' : '$scores' } , { '$group' : { '_id' : '$_id' , 'average' : { $avg : '$scores.score' } } } , { '$sort' : { 'average' : -1 } } , { '$limit' : 1 } )
+{ "_id" : 13, "average" : 91.98315917172745 }
+```
