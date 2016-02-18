@@ -33,3 +33,24 @@ This project requires Python 2.7. The code is not 3.0 compliant.
 Ok, once you get the blog posts working, validate.py will print out a validation code for HW 3.2.
 
 Please enter it below, exactly as shown with no spaces.
+
+##### Answer: 89jklfsjrlk209jfks2j2ek
+```
+python validate.py
+Welcome to the HW 3.2 and HW 3.3 validation tester
+Trying to create a test user  SwQggQq
+Found the test user  SwQggQq  in the users collection
+User creation successful.
+Trying to login for test user  SwQggQq
+User login successful.
+Trying to submit a post with title  qwxZrQCfMIaIiyxJkBWoEAgvDeWPwK
+Submission of single post successful
+Trying to submit a post with title  TPzGkfZIAEwCtwstSodDZtrWgfYtAi
+Submission of second post successful
+Trying to grab the blog home page at url  http://localhost:8082/
+Block index looks good.
+Found blog post in posts collection
+Tests Passed for HW 3.2. Your HW 3.2 validation code is 89jklfsjrlk209jfks2j2ek
+Trying to submit a blog comment for post with title qwxZrQCfMIaIiyxJkBWoEAgvDeWPwK
+Can't add blog comments (so HW 3.3 not yet complete)
+```
