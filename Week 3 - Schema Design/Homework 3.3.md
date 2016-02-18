@@ -47,3 +47,26 @@ python validate.py
 ``
 
 Once you have the validation code, please copy and paste in the box below, no spaces.
+
+##### Answer: jk1310vn2lkv0j2kf0jkfs
+
+```
+python validate.py
+Welcome to the HW 3.2 and HW 3.3 validation tester
+Trying to create a test user  umLrkIQ
+Found the test user  umLrkIQ  in the users collection
+User creation successful.
+Trying to login for test user  umLrkIQ
+User login successful.
+Trying to submit a post with title  MakKicTaVFLegGbsWNtlTpSjdVFjtt
+Submission of single post successful
+Trying to submit a post with title  gRMqjbqVPpKuKjGgUoROddCqFzvkPl
+Submission of second post successful
+Trying to grab the blog home page at url  http://localhost:8082/
+Block index looks good.
+Found blog post in posts collection
+Tests Passed for HW 3.2. Your HW 3.2 validation code is 89jklfsjrlk209jfks2j2ek
+Trying to submit a blog comment for post with title MakKicTaVFLegGbsWNtlTpSjdVFjtt
+Successfully added blog comments
+Tests Passed for HW 3.3. Your HW 3.3 validation code is jk1310vn2lkv0j2kf0jkfs
+```
