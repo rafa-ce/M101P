@@ -43,3 +43,57 @@ python validate.py
 ``
 
 (note that for folks who are using MongoLabs or MongoHQ there are some command line options to validate.py to make it possible to use those services) Now enter the validation code below.
+
+##### Answer: 893jfns29f728fn29f20f2
+
+The blog home page
+
+```
+> db.posts.createIndex( { date : -1 } )
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+```
+
+The page that displays blog posts by tag (http://localhost:8082/tag/whatever)
+```
+> db.posts.createIndex( { permalink : 1 } )
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 2,
+	"numIndexesAfter" : 3,
+	"ok" : 1
+}
+```
+
+The page that displays a blog entry by permalink (http://localhost:8082/post/permalink)
+```
+> db.posts.createIndex( { tags : 1, date : -1 } )
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 3,
+	"numIndexesAfter" : 4,
+	"ok" : 1
+}
+```
+
+Run validate.py
+```
+python validate.py
+Welcome to the HW 4.3 Checker. My job is to make sure you added the indexes
+that make the blog fast in the following three situations
+	When showing the home page
+	When fetching a particular post
+	When showing all posts for a particular tag
+Data looks like it is properly loaded into the posts collection
+Home page is super fast. Nice job.
+
+Blog retrieval by permalink is super fast. Nice job.
+
+Blog retrieval by tag is super fast. Nice job.
+
+Tests Passed for HW 4.3. Your HW 4.3 validation code is 893jfns29f728fn29f20f2
+```
