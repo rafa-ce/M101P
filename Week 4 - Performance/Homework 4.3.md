@@ -1,4 +1,4 @@
-####### Homework: Homework 4.3
+###### Homework: Homework 4.3
 
 NOTE there is a bug [(TOOLS-939)](https://jira.mongodb.org/browse/TOOLS-939?_ga=1.214964948.233411772.1455713353) affecting some versions of mongoimport and mongorestore that causes ``mongoimport -d blog -c posts < posts.json`` to fail. As a workaround, you can use ``mongoimport -d blog -c posts < posts.json --batchSize 1``.
 
@@ -58,7 +58,7 @@ The blog home page
 }
 ```
 
-The page that displays blog posts by tag (http://localhost:8082/tag/whatever)
+The page that displays a blog entry by permalink (http://localhost:8082/post/permalink)
 ```
 > db.posts.createIndex( { permalink : 1 } )
 {
@@ -69,7 +69,7 @@ The page that displays blog posts by tag (http://localhost:8082/tag/whatever)
 }
 ```
 
-The page that displays a blog entry by permalink (http://localhost:8082/post/permalink)
+The page that displays blog posts by tag (http://localhost:8082/tag/whatever)
 ```
 > db.posts.createIndex( { tags : 1, date : -1 } )
 {

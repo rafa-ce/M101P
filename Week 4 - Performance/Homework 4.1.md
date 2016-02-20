@@ -1,4 +1,4 @@
-####### Homework: Homework 4.1
+###### Homework: Homework 4.1
 
 Suppose you have a collection with the following indexes:
 

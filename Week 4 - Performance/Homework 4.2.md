@@ -1,4 +1,4 @@
-####### Homework: Homework 4.2
+###### Homework: Homework 4.2
 
 Suppose you have a collection called tweets whose documents contain information about the created_at time of the tweet and the user's followers_count at the time they issued the tweet. What can you infer from the following explain output?
 
@@ -153,10 +153,15 @@ Suppose you have a collection called tweets whose documents contain information 
 ##### Answer
 
 * Correct choices:
+
 **The query uses an index to determine the order in which to return result documents.** - The sort field matches the index used (but not the query in any way), so the index was able to use the index to sort.
+
 **The query examines 251120 documents.** - You can see this in the totalDocsExamined field of the executionStats.
 
 * Incorrect Choices:
+
 **The query uses an index to determine which documents match.** - There is no mention of using an index for the "user.followers_count" field.
+
 **The query returns 251120 documents.** - nReturned was 10.
+
 **The query is a covered query.** - This would only be the case if "totalDocsExamined" were 0.

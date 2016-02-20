@@ -1,4 +1,4 @@
-####### Homework: Homework 4.4
+###### Homework: Homework 4.4
 
 In this problem you will analyze a profile log taken from a mongoDB instance. To start, please download sysprofile.json from [Download Handout](https://university.mongodb.com/static/MongoDB_2016_M101P_January/handouts/sysprofile.acfbb9617420.json) link and import it with the following command:
 
