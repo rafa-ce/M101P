@@ -59,10 +59,10 @@ Suppose you have a collection with the following indexes:
 
 Which of the following queries can utilize at least one index to find all matching documents or to sort? Check all that apply.
 
-:white_medium_small_square: db.products.find( { brand : 'GE' } ).sort( { category : 1, brand : -1 } )
+:white_medium_square: db.products.find( { brand : 'GE' } ).sort( { category : 1, brand : -1 } )
 
-:white_medium_small_square: db.products.find( { $and : [ { price : { $gt : 30 } },{ price : { $lt : 50 } } ] } ).sort( { brand : 1 } )
+:white_check_mark: db.products.find( { $and : [ { price : { $gt : 30 } },{ price : { $lt : 50 } } ] } ).sort( { brand : 1 } )
 
-:white_medium_small_square: db.products.find( { 'brand' : "GE" } ).sort( { price : 1 } )
+:white_check_mark: db.products.find( { 'brand' : "GE" } ).sort( { price : 1 } )
 
-:white_medium_small_square: db.products.find( { 'brand' : "GE" } )
+:white_medium_square: db.products.find( { 'brand' : "GE" } )
