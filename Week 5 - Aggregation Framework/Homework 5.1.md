@@ -27,3 +27,23 @@ Please choose your answer below for the most prolific comment author:
 :white_medium_small_square: Leonida Lafond
 
 :white_medium_small_square: Corliss Zuk
+
+#####Answer: Elizabet Kleine
+
+```
+db.posts.aggregate(
+  {
+    "$unwind":"$comments"
+  },
+  {
+    $group: { "_id":"$comments.author", "count": { $sum:1 } }
+  },
+  {
+    $sort: { count:-1 }
+  },
+  {
+    $limit:1
+  }
+)
+{ "_id" : "Elizabet Kleine", "count" : 503 }
+```
