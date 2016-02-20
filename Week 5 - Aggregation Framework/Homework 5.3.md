@@ -54,3 +54,29 @@ If you prefer, you may [download the handout](https://university.mongodb.com/sta
 ``
 
 Below, choose the class_id with the highest average student average.
+
+#Answer: 1
+
+```
+db.grades.aggregate(
+	{
+		$unwind: "$scores"
+	},
+	{
+		$match: { "scores.type" : { $ne : "quiz" }  }
+	},
+	{
+    $group:{_id: {student_id:'$student_id',class_id:'$class_id'}, avg_student:{$avg:'$scores.score'}}
+  },
+	{
+		$group:{_id: '$_id.class_id', avg_class: { $avg:'$avg_student'} }
+	},
+	{
+		$sort:{'avg_class':-1}
+	},
+	{
+		$limit: 1
+	}
+)
+{ "_id" : 1, "avg_class" : 64.50642324269175 }
+```
