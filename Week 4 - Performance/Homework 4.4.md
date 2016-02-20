@@ -17,3 +17,15 @@ Now query the profile data, looking for all queries to the students collection i
 :white_medium_small_square: 15820
 
 :white_medium_small_square: 2350
+
+##### Answer: 15820
+
+```
+$ mongo
+MongoDB shell version: 3.2.0
+connecting to: test
+> use m101
+switched to db m101
+> db.profile.find({ op:"query", ns:/school2.students/}).sort({ millis: -1}).limit( 1)
+{ "_id" : ObjectId("56c7a85f9411cf473ff3c91a"), "ts" : ISODate("2012-11-20T20:09:49.862Z"), "op" : "query", "ns" : "school2.students", "query" : { "student_id" : 80 }, "ntoreturn" : 0, "ntoskip" : 0, "nscanned" : 10000000, "keyUpdates" : 0, "numYield" : 5, "lockStats" : { "timeLockedMicros" : { "r" : 19776550, "w" : 0 }, "timeAcquiringMicros" : { "r" : 4134067, "w" : 5 } }, "nreturned" : 10, "responseLength" : 2350, "millis" : 15820, "client" : "127.0.0.1", "user" : "" }
+```
