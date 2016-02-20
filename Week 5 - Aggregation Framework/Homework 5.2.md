@@ -21,3 +21,22 @@ If you prefer, you may [download the handout](https://university.mongodb.com/sta
 ``
 
 Once you've generated your aggregation query and found your answer, select it from the choices below.
+
+#####Answer: 44804
+
+
+```
+> db.zips.aggregate(
+  {
+    $group:{_id:{city:'$city',state:'$state'}, population:{$sum:'$pop'}}
+  },
+  {
+    $match: { $or:[{"_id.state":'CA'},{"_id.state":'NY'}], population: { $gt: 25000 } }
+  },
+  {
+    $group:{_id:null,avg:{$avg:'$population'}}
+  }
+)
+{ "_id" : null, "avg" : 44804.782608695656 }
+
+```
