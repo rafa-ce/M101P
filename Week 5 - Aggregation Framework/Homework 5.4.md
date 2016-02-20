@@ -47,3 +47,20 @@ Note: *When you mongoimport the data, you will probably see a few duplicate key 
 :white_medium_small_square: 158249
 
 :white_medium_small_square: 543282
+
+#####Answer: 298015
+
+```
+db.zips.aggregate([
+  {
+    $project: { first_char: {$substr : ["$city",0,1]}, pop:1 }
+  },
+  {
+    $match: { first_char: {'$regex':'[0-9]'} }
+  },
+  {
+    $group: { _id: 'null', sum_total:{'$sum':'$pop'} }
+  }
+])
+{ "_id" : "null", "sum_total" : 298015 }
+```
