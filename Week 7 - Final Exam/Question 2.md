@@ -17,3 +17,29 @@ Which pair of people have the greatest number of messages in the dataset?
 :white_medium_square: evelyn.metoyer@enron.com to kate.symes@enron.com
 
 :white_medium_square: susan.mara@enron.com to alan.comnes@enron.com
+
+#####Answer: susan.mara@enron.com to jeff.dasovich@enron.com
+
+```
+db.messages.aggregate(
+  {
+    $unwind: '$headers.To'
+  },
+  {
+    $group: { _id: "$_id", headers_from: "$headers.From", headers_to: { $addToSet : "$headers.To" } }
+  },
+  {
+    $unwind: '$headers_to'
+  },
+  {
+    $group:{_id: { from:'$headers_from', to: '$headers_to'}, "count": { $sum:1 }}
+  },
+  {
+    $sort: { "count":-1}
+  },
+  {
+    $limit:1
+  }
+)
+{ "_id" : { "from" : "susan.mara@enron.com", "to" : "jeff.dasovich@enron.com" }, "count" : 750 }
+```
