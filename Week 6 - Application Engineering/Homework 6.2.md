@@ -2,12 +2,16 @@
 
 Let's suppose you have a five member replica set and want to assure that writes are committed to the journal and are acknowledged by at least 3 nodes before you proceed forward. What would be the appropriate settings for w and j?
 
-:white_medium_small_square: w=1, j=1
+:white_medium_square: w=1, j=1
 
-:white_medium_small_square: w="majority", j=1
+:white_check_mark: w="majority", j=1
 
-:white_medium_small_square: w=3, j=0
+:white_medium_square: w=3, j=0
 
-:white_medium_small_square: w=5, j=1
+:white_medium_square: w=5, j=1
 
-:white_medium_small_square: w=1,j=3
+:white_medium_square: w=1,j=3
+
+##### Note
+
+The majority of five nodes is three nodes.
