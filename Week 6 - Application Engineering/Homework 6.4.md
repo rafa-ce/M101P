@@ -49,10 +49,10 @@ db.students.find({'student_id':2000})
 
 Which shards would be involved in answering the query?
 
-:white_medium_small_square: s0, s1, and s2
+:white_medium_square: s0, s1, and s2
 
-:white_medium_small_square: s0
+:white_medium_square: s0
 
-:white_medium_small_square: s1
+:white_check_mark: s1
 
-:white_medium_small_square: s2
+:white_medium_square: s2
