@@ -72,9 +72,9 @@ db.stuff.find({'a':{'$lt':10000}, 'b':{'$gt': 5000}}, {'a':1, 'c':1}).sort({'c':
 Which of the indexes could be used by MongoDB to assist in answering the query? Check all that apply.
 
 
-:white_medium_square: c_1
+:white_check_mark: c_1
 
-:white_medium_square: a_1_b_1
+:white_check_mark: a_1_b_1
 
 :white_medium_square: a_1_b_1_c_-1
 
