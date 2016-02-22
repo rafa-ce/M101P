@@ -20,3 +20,20 @@ python validate.py
 Remember that the blog needs to be running as well as Mongo. The validation script takes some options if you want to run outside of localhost.
 
 After you have gotten it working, enter the validation string below.
+
+#####Answer:3f837hhg673ghd93hgf8
+
+Run validate.py:
+
+```
+$ python validate.py
+Welcome to the M101 Final Exam, Question 4 Validation Checker
+Trying to grab the blog home page at url and find the first post. http://localhost:8082/
+Found a post url:  /post/mxwnnnqaflufnqwlekfd
+Trying to grab the number of likes for url  http://localhost:8082/post/mxwnnnqaflufnqwlekfd
+Likes value  1
+Clicking on Like link for post:  /post/mxwnnnqaflufnqwlekfd
+Trying to grab the number of likes for url  http://localhost:8082/post/mxwnnnqaflufnqwlekfd
+Likes value  2
+Tests Passed for Final 4. Your validation code is 3f837hhg673ghd93hgf8
+```

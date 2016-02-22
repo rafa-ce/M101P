@@ -146,13 +146,23 @@ class BlogPostDAO:
             print "Unexpected error:", sys.exc_info()[0]
             return 0
 
-        # increments the number of likes on a particular comment. Returns the number of documented updated
+    # increments the number of likes on a particular comment. Returns the number of documented updated
     def increment_likes(self, permalink, comment_ordinal):
 
         #
         # XXX Final exam
         # Work here. You need to update the num_likes value in the comment being liked
         #
+        try:
+            result = self.posts.update_one(
+                { 'permalink': permalink },
+                { '$inc': { 'comments.' + str(comment_ordinal) + '.num_likes': 1 } }
+            )
+            return result.modified_count
 
+        except:
+            print "Could not update the collection, error"
+            print "Unexpected error:", sys.exc_info()[0]
+            return 0
 
         return 0
