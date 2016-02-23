@@ -48,3 +48,46 @@ Hint: you might consider creating an index or two or your program will take a lo
 :white_medium_square: 45,911
 
 :white_medium_square: 44,822
+
+#####Answer: 44,822
+
+Import the collections in albums.json and images.json
+
+```
+$ mongoimport -d photo_sharing -c albums < albums.json
+2016-02-23T01:34:26.548+0000	connected to: localhost
+2016-02-23T01:34:26.801+0000	imported 1000 documents
+$ mongoimport -d photo_sharing -c images < images.json
+2016-02-23T01:34:41.316+0000	connected to: localhost
+2016-02-23T01:34:44.313+0000	photo-sharing.images	7.8 MB
+2016-02-23T01:34:44.886+0000	photo-sharing.images	9.2 MB
+2016-02-23T01:34:44.887+0000	imported 100000 documents
+```
+
+Create index for images in the album:
+```
+> db.albums.createIndex( { images : 1} )
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+```
+
+Create index for tags:
+```
+> db.images.createIndex( { tags : 1} )
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+```
+
+Run question_7.py
+```
+$ python question_7.py 
+Answer:  44822
+```
