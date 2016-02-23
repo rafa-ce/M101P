@@ -4,7 +4,7 @@ Imagine an electronic medical record database designed to hold the medical recor
 
 We need to decide on a shard key to shard the record collection. What's the best shard key for the record collection, provided that we are willing to run inefficient scatter-gather operations to do infrequent research and run studies on various diseases and cohorts? That is, think mostly about the operational aspects of such a system. And by operational, we mean, think about what the most common operations that this systems needs to perform day in and day out.
 
-:white_medium_square: patient_id
+:white_check_mark: patient_id
 
 :white_medium_square: *_id*
 
