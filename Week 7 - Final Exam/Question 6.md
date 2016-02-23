@@ -21,9 +21,9 @@ Suppose you have a collection of students of the following form:
 
 Now suppose that basic inserts into the collection, which only include the last name, first name and student_id, are too slow (we can't do enough of them per second from our program). What could potentially improve the speed of inserts. Check all that apply.
 
-:white_check_mark: Add an index on last_name, first_name if one does not already exist.
+:white_medium_square: Add an index on last_name, first_name if one does not already exist.
 
-:white_medium_square: Remove all indexes from the collection, leaving only the index on *_id* in place
+:white_check_mark: Remove all indexes from the collection, leaving only the index on *_id* in place
 
 :white_medium_square: Provide a hint to MongoDB that it should not use an index for the inserts
 

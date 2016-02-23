@@ -76,8 +76,8 @@ Which of the indexes could be used by MongoDB to assist in answering the query? 
 
 :white_check_mark: a_1_b_1
 
-:white_medium_square: a_1_b_1_c_-1
+:white_check_mark: a_1_b_1_c_-1
 
-:white_medium_square: a_1_c_1
+:white_check_mark: a_1_c_1
 
 :white_medium_square: *_id_*
