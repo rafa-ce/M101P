@@ -141,8 +141,8 @@ Check below all the statements that are true about the way MongoDB handled this 
 
 :white_medium_square: The query used an index to figure out which documents match the find criteria.
 
-:white_medium_square: The query scanned every document in the collection.
+:white_check_mark: The query scanned every document in the collection.
 
 :white_medium_square: The query returned 120,477 documents.
 
-:white_medium_square: The query avoided sorting the documents because it was able to use an index's ordering.
+:white_check_mark: The query avoided sorting the documents because it was able to use an index's ordering.
