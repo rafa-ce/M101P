@@ -12,4 +12,4 @@ Will there be a rollback of data on Node 1 when it comes back up? Choose the bes
 
 :white_medium_square: Maybe, it depends on whether Node 3 has processed the write.
 
-:white_medium_square: Maybe, it depends on whether Node 2 has processed the write.
+:white_check_mark: Maybe, it depends on whether Node 2 has processed the write.
